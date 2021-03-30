@@ -1,0 +1,26 @@
+
+<div mat-dialog-title> Log In
+    <mat-icon mat-dialog-close (click)="cancel()" style="float:right;cursor: pointer;">close</mat-icon>
+</div>
+<div mat-dialog-content>
+    <form fxLayout="column" [formGroup]="loginForm" (ngSubmit)="showGallery(loginForm)">
+        <div fxFlex>
+             <mat-form-field appearance='outline'>
+                <mat-label>User Id<span>*</span></mat-label>
+                <input name='userid' type="text" formControlName='userid' matInput maxlength="30">
+            </mat-form-field>  
+      
+        </div>
+        <div fxFlex>
+             <mat-form-field appearance='outline'>
+                <mat-label>Password<span>*</span></mat-label>
+                <input name="password" type="text" formControlName='password' matInput maxlength="30">
+            </mat-form-field> 
+        
+        </div>
+        <div fxFlex>
+             <button mat-button type="submit">Sigin-In</button> 
+           
+        </div>
+    </form>
+</div>
